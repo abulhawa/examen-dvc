@@ -5,7 +5,16 @@ stages:
     - data/raw_data/raw.csv
     - src/data/split_data.py
     outs:
-    - data/processed_data/X_test.csv
     - data/processed_data/X_train.csv
+    - data/processed_data/X_test.csv
     - data/processed_data/y_test.csv
     - data/processed_data/y_train.csv
+  normalize:
+    cmd: python src/data/normalize_data.py
+    deps:
+    - data/processed_data/X_train.csv
+    - data/processed_data/X_test.csv
+    - src/data/normalize_data.py
+    outs:
+    - data/processed_data/X_train_scaled.csv
+    - data/processed_data/X_test_scaled.csv
