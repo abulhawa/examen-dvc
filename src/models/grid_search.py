@@ -25,4 +25,3 @@ with open("models/best_params.pkl", "wb") as output:
     pickle.dump(search.best_params_, output)
 
 print(f"Best parameters: {search.best_params_}")
-print(f"Mean cross-validation MSE: {-search.best_score_:.6f}")
