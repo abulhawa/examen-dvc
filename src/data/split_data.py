@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 def main():
     df = pd.read_csv("data/raw_data/raw.csv")
 
-    X = df.drop(columns=["silica_concentrate"])
+    X = df.drop(columns=["date", "silica_concentrate"])
     y = df[["silica_concentrate"]]
 
     X_train, X_test, y_train, y_test = train_test_split(
@@ -22,7 +22,7 @@ def main():
         "y_test": y_test,
     }.items():
         data.to_csv("data/processed_data/" + f"{name}.csv", index=False)
-        print(f"{name}: {data.shape}")
+        print(f"{name}: {data.shape}, dtypes: {set(data.dtypes)}")
 
 
 if __name__ == "__main__":

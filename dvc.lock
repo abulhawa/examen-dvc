@@ -9,17 +9,17 @@ stages:
       size: 333757
     - path: src/data/split_data.py
       hash: md5
-      md5: 997e2680d5c150d5c2e5d95abc6f307a
-      size: 651
+      md5: cdeb722d200c643fdfa7f57adc972fe8
+      size: 687
     outs:
     - path: data/processed_data/X_test.csv
       hash: md5
-      md5: b6c2910e3b3fc562c5b516b63fc3e22c
-      size: 59909
+      md5: b2af62a7e108b077aec89fa2622996db
+      size: 52624
     - path: data/processed_data/X_train.csv
       hash: md5
-      md5: ef01f67c035349e375300528a99938f5
-      size: 238533
+      md5: 535251fa6c1a1d098cc7a36e0bd62f38
+      size: 209468
     - path: data/processed_data/y_test.csv
       hash: md5
       md5: a051d29629c8bbb4cfb7e85c7f0315da
